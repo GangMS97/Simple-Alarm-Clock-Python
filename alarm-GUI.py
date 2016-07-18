@@ -45,9 +45,9 @@ button1.pack()
 #this Label2 will show the Last Alarm Time
 label2= ttk.Label(frame1)
 label2.pack()
-time2 = time.time
+#time2 = time.time
 
-if time.time() > 12:
+#if time.time() > 12:
     
 #label2.config(text="hello")
 
