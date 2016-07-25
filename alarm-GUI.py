@@ -25,6 +25,7 @@ def SubmitButton():
      label2.config(text = "Alarm music playing.....")
 def Message1():
     AlarmTimeLable= entry1.get()
+    label2.config(text="the Alarm time is Counting...")
     #label2.config(text= "the Alarm will ring at {}".format(AlarmTimeLable))
     messagebox.showinfo(title = 'Alarm clock', message = 'Alarm will Ring at {}'.format(AlarmTimeLable))     
 frame1 = ttk.Frame(root)
@@ -45,9 +46,7 @@ button1.pack()
 #this Label2 will show the Last Alarm Time
 label2= ttk.Label(frame1)
 label2.pack()
-#time2 = time.time
 
-#if time.time() > 12:
     
 #label2.config(text="hello")
 
