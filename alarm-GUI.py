@@ -23,6 +23,7 @@ def SubmitButton():
      print("now Alarm Musing Playing")
      os.system("start alarm-music.mp3")
      label2.config(text = "Alarm music playing.....")
+     label3.config(text = format(AlarmTime))
      messagebox.showinfo(title= 'Alarm Message', message= "{}".format(entry2.get()))
 def Message1():
     AlarmTimeLable= entry1.get()
@@ -52,6 +53,8 @@ button1.pack()
 #this Label2 will show the Last Alarm Time
 label2= ttk.Label(frame1)
 label2.pack()
+label3= ttk.Label(frame1)
+label3.pack()
 
     
 #label2.config(text="hello")
