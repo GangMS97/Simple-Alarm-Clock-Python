@@ -1,11 +1,11 @@
-#Alarm clock using Python Tkinter module by Rajkumar Selvaraj
+# Alarm clock using Python Tkinter module by Rajkumar Selvaraj
 from tkinter import *
 from tkinter import ttk
 import time
 import os
 from tkinter import messagebox
 
-#def main():
+# def main():
 root = Tk()
 root.title("Alarm clock")
 def SubmitButton():
@@ -39,7 +39,7 @@ label1.pack()
 
 entry1 = ttk.Entry(frame1, width = 30)
 entry1.pack()
-entry1.insert(3,"example - 13:15")
+entry1.insert(3,"example - 12:29")
 
 labelAlarmMessage= ttk.Label(frame1, text="Alarm Message:")
 labelAlarmMessage.pack()
@@ -57,3 +57,4 @@ label2.pack()
 #label2.config(text="hello")
 
 root.mainloop()
+# test
