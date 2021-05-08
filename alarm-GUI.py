@@ -14,24 +14,37 @@ def SubmitButton():
     AlarmTime = entry1.get()
     Message1()
     # label2.config(text ="The Alarm will Ring at {} ".format(AlarmTime))  #delayed in execution
-    CurrentTime = time.strftime("%H:%M")
+    # CurrentTime = time.strftime("%H:%M")
     print("the alarm time is: {}".format(AlarmTime))
-    # label2.config(text="")
-    while AlarmTime != CurrentTime:
-        # label2.config(text ="The Alarm will Ring at {} ".format(AlarmTime))
+    # label2.config(text="")\
+    def update_clock(self):
         CurrentTime = time.strftime("%H:%M")
-        time.sleep(1)
 
-    if AlarmTime == CurrentTime:
-        print("now Alarm Musing Playing")
-        os.system("start alarm-music.mp3")
-        label2.config(text="Alarm music playing.....")
-        label3.config(text=format(AlarmTime))
-        messagebox.showinfo(title='Alarm Message', message="{}".format(entry2.get()))
+        # label2.config(text ="The Alarm will Ring at {} ".format(AlarmTime))
+        if AlarmTime == CurrentTime:
+            print("now Alarm Musing Playing")
+            os.system("start alarm-music.mp3")
+            label2.config(text="Alarm music playing.....")
+            label3.config(text=format(AlarmTime))
+            messagebox.showinfo(title='Alarm Message', message="{}".format(entry2.get()))
+        else:
+            self.root.after(1000, self.update_clock)
+
+
+
+    #if AlarmTime == CurrentTime:
+     #   print("now Alarm Musing Playing")
+      #  os.system("start alarm-music.mp3")
+       # label2.config(text="Alarm music playing.....")
+        #label3.config(text=format(AlarmTime))
+        #messagebox.showinfo(title='Alarm Message', message="{}".format(entry2.get()))
+
+
+
 
 def ListButton():
     AlarmTime = entry1.get()
-    Message1()
+    # Message1()
     messagebox.showinfo(title='Alarm List', message="{}".format(entry1.get()))
 
 
